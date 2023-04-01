@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://l8fvqt7lass"]
+[gd_scene load_steps=6 format=3 uid="uid://l8fvqt7lass"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.cs" id="1_u312i"]
+[ext_resource type="Script" path="res://Scripts/State Machine/StateMachine.cs" id="2_i66rr"]
+[ext_resource type="Script" path="res://Scenes/Player/Walk.cs" id="3_gpg2o"]
+[ext_resource type="Script" path="res://Scenes/Player/Attack.cs" id="4_fx40m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_his3l"]
 
@@ -9,3 +12,13 @@ script = ExtResource("1_u312i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_his3l")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("InitionState")]
+script = ExtResource("2_i66rr")
+InitionState = NodePath("Walk")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("3_gpg2o")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("4_fx40m")
