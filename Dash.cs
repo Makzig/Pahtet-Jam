@@ -1,15 +1,20 @@
 using Godot;
 using System;
 
-public partial class Dash : Node
+public partial class Dash : State
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+	float _speed = 30000.0f;
+	Vector2 _dashDirection;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+
+    public override void EnterState(Variant _need = default)
+    {
+        base.EnterState(_need);
+        
+
+    }
+
+
+
+
 }

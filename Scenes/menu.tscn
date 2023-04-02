@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck3wii6q8mk3i"]
+[gd_scene load_steps=5 format=3 uid="uid://tcbu342mwh3t"]
 
 [ext_resource type="FontFile" uid="uid://b7utfb4y8otfg" path="res://Assests/Ticketing.ttf" id="1_7mqok"]
 [ext_resource type="Texture2D" uid="uid://cvapfkjqbhrnk" path="res://Assests/kenney_1-bit-platformer-pack/Tilemap/monochrome_tilemap.png" id="2_kc644"]

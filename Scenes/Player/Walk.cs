@@ -4,17 +4,19 @@ using System;
 public partial class Walk : State
 {
     [Export]
-    private Sprite2D _sprite;
+    private AnimatedSprite2D _sprite;
     
 
     [Export]
     private float _acceleration = 700.0f;
     [Export]
     private float _maxSpeed = 2500.0f;
+    [Export]
+    private float _gravity = 1000.0f; 
 
-    private int _direction = 1;
+    private protected int _direction = 1;
 
-    private CharacterBody2D _body;
+    private protected CharacterBody2D _body;
 
 
 
@@ -40,6 +42,13 @@ public partial class Walk : State
 
         bodyVelocity.X += _acceleration * _direction * (float)deltaTime;
         bodyVelocity = bodyVelocity.LimitLength(_maxSpeed * (float)deltaTime);
+        
+        if (_body.IsOnFloor())
+        {
+            bodyVelocity.Y += _gravity * (float)deltaTime;
+        }
+        
+
         _body.Velocity = bodyVelocity;
         _body.MoveAndSlide();
 
