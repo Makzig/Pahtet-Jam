@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl83thfpmlblh"]
+
+[ext_resource type="Script" path="res://Scripts/State Machine/StateMachine.cs" id="1_4mcon"]
+[ext_resource type="Script" path="res://Dash.cs" id="2_f5rnb"]
+[ext_resource type="Script" path="res://Scenes/Player/Walk.cs" id="3_r7rsi"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_4mcon")
+
+[node name="Dash" type="Node" parent="StateMachine"]
+script = ExtResource("2_f5rnb")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("3_r7rsi")

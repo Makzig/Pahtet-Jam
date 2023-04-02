@@ -41,7 +41,6 @@ public partial class Walk : State
         bodyVelocity.X += _acceleration * _direction * (float)deltaTime;
         bodyVelocity = bodyVelocity.LimitLength(_maxSpeed * (float)deltaTime);
         _body.Velocity = bodyVelocity;
-        GD.Print(_body.Position);
         _body.MoveAndSlide();
 
     }
