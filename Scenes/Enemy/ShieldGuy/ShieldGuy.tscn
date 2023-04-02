@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkro36fkr1snw"]
+
+[ext_resource type="Script" path="res://Scripts/State Machine/StateMachine.cs" id="1_e1a2q"]
+[ext_resource type="Script" path="res://Scenes/Enemy/ShieldGuy/ShiledGuyPush.cs" id="2_4cqrj"]
+[ext_resource type="Script" path="res://Scenes/Player/Walk.cs" id="2_8ralc"]
+
+[node name="ShieldGuy" type="CharacterBody2D"]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_e1a2q")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("2_8ralc")
+
+[node name="Push" type="Node" parent="StateMachine"]
+script = ExtResource("2_4cqrj")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://coo6qem3sogi7"]
+
+[ext_resource type="Script" path="res://Scripts/State Machine/StateMachine.cs" id="1_oms22"]
+[ext_resource type="Script" path="res://Scenes/Player/Walk.cs" id="2_kc0y4"]
+[ext_resource type="Script" path="res://Scenes/Enemy/Archer/ArcherShoot.cs" id="3_njb7v"]
+
+[node name="Archer" type="CharacterBody2D"]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_oms22")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("2_kc0y4")
+
+[node name="Shoot" type="Node" parent="StateMachine"]
+script = ExtResource("3_njb7v")

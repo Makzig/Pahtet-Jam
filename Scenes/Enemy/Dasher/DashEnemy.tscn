@@ -9,8 +9,8 @@
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("1_4mcon")
 
-[node name="Dash" type="Node" parent="StateMachine"]
-script = ExtResource("2_f5rnb")
-
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("3_r7rsi")
+
+[node name="Dash" type="Node" parent="StateMachine"]
+script = ExtResource("2_f5rnb")
